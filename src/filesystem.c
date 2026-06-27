@@ -49,7 +49,7 @@ static const char* cache_file = "_pt1210.cache";
 static void read_error()
 {
 	char error_buf[FS_WIDTH_CHARS];
-	snprintf(error_buf, FS_WIDTH_CHARS, "I/O ERROR, DOS RETURN CODE %ld", IoErr());
+	snprintf(error_buf, FS_WIDTH_CHARS, "I/O ERROR, DOS RETURN CODE %ld", (long)IoErr());
 
 	/* TODO: Use Fault() when it's available (Kickstart v36) */
 	/* Fault(error, "", FS_LoadErrBuff, sizeof(FS_LoadErrBuff)); */
