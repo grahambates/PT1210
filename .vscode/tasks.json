@@ -29,6 +29,36 @@
             "options": {
                 "cwd": "${workspaceFolder}/legacy"
             }
+        },
+        {
+            "label": "build debug",
+            "type": "shell",
+            "command": "_make",
+            "args": [
+                "SHELL=sh.exe"
+            ],
+            "group": "build",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/build-debug"
+            }
+        },
+        {
+            "label": "build release",
+            "type": "shell",
+            "command": "_make",
+            "args": [
+                "SHELL=sh.exe"
+            ],
+            "group": "build",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/build-release"
+            }
         }
     ]
 }
