@@ -5,8 +5,8 @@
 	XDEF _selectaline
 
 ; When linking with amiga-gcc, we need to use the
-; magic section name '.data_chip' to get a chip RAM data hunk.
-		section .data_chip,data_c
+; magic section name '.datachip' to get a chip RAM data hunk.
+		section .datachip,data_c
 
 _cCopper	dc.w	$83df,$fffe
 		dc.w	bplcon0,$2200	; set as 1 bp display
@@ -341,8 +341,8 @@ _track		dcb.b	40*9*3
 
 
 
-; Another magic section name '.bss_chip' to get a chip RAM BSS hunk.
-	section .bss_chip,bss_c
+; Another magic section name '.bsschip' to get a chip RAM BSS hunk.
+	section .bsschip,bss_c
 
 _basepattern	ds.b	40*PT_LineHeight
 
