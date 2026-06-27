@@ -1,0 +1,36 @@
+{
+	// Use IntelliSense to learn about possible attributes.
+	// Hover to view descriptions of existing attributes.
+	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"type": "amiga-assembly",
+			"request": "launch",
+			"name": "WinUAE Debug",
+			"stopOnEntry": false,
+			"program": "${workspaceFolder}/bin/pt1210-debug.exe",
+			"remoteProgram": "SYS:pt1210-debug.exe",
+			"emulatorType": "winuae",
+			"emulatorArgs": [
+				"-s",
+				"filesystem=rw,dh0:${workspaceFolder}/bin"
+			],
+			"preLaunchTask": "build debug"
+		},
+		{
+			"type": "amiga-assembly",
+			"request": "launch",
+			"name": "WinUAE Launch",
+			"noDebug": true,
+			"program": "${workspaceFolder}/bin/pt1210-debug.exe",
+			"remoteProgram": "SYS:pt1210-debug.exe",
+			"emulatorType": "winuae",
+			"emulatorArgs": [
+				"-s",
+				"filesystem=rw,dh0:${workspaceFolder}/bin"
+			],
+			"preLaunchTask": "build debug"
+		}
+	]
+}
